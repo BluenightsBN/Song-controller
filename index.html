@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="icon" href="icon.jpg"
+	<title>AI DJ WEB APP</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/addons/p5.sound.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/addons/p5.sound.min.js"></script>
+
+
+
+
+
+  <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+<body background="bg.jpg">
+<center>
+  	<h2>SONG CONTROLLER</h2>
+	    <br>
+	    <span>NOTE - Move your left-hand wrist up and down for increasing and decreasing the volume. 
+        Move your right-hand wrist up and down for increasing and decreasing the speed</span>
+  	
+	<br>
+  
+  <label>Select A Song-</label>
+
+  <select id="sound" onchange="changesong()">
+    <option value="music.mp3">random music</option>
+    <option value="Khairiyat.mp3">Khairiyat </option>  
+    <option value="Zindagi_Ek_Safar_Hai.mp3">Zindagi Ek Safar Hai</option>
+    <option value="Tum_Se_Hi.mp3">Tum Se Hi</option>
+    <option value="Tere_Bina.mp3">Tere Bina</option>
+    
+  </select>
+
+  
+  <div class="speed"> 
+<img src="speed.gif" class="speed_img">
+<br>
+<h3 id="speed_label">speed</h3>
+ </div>
+
+  <div class="volume"> 
+    <img src="volume_.gif" class="volume_img">
+    <br>
+    <h3 id="volume_label">Volume</h3>
+    
+      </div>
+
+  
+  <br><br>
+</center>
+
+<span>
+ <button onclick="playsong();" class="btn text-danger" id="play">PLAY</button>
+</span>
+<br>
+ <span>
+ <button onclick="pausesong();" class="btn text-warning" id="pause">PAUSE</button>
+</span>
+ <br>
+ <span>
+ <button onclick="stopsong();" class="btn text-success" id="stop">STOP</button>
+</span>
+
+<br><br>
+
+ 
+
+<script src="main.js"></script>
+</body>
+</html>
